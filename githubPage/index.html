@@ -17,8 +17,13 @@
   // Now, when user clicks on button, Pd will start and sound should work even on iOS.
   var button = document.getElementById('startButton')
   Pd.startOnClick(button, function() {
-    
   })
+  
+  <div id="target"></div>
+  var toggle = new Nexus.Toggle('#target',{
+    'size': [40,20],
+    'state': false
+})
 </script>
 
   </body>
