@@ -20,11 +20,12 @@
   })
     </script>
   
-    <button id="on"> On</button>
-    <script>
-      var on = document.getElementById('on')
-      Pd.send('test',[on])
-    </script>
+    <div id="slider"></div>
+    var slider = new Nexus.Slider('#slider')
+    
+    slider.on('change',function(v) {
+  console.log(v);
+})
  
     
   </body>
