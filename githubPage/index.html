@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script src="js/NexusUI.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/webpd-latest.js"></script>
+    <script>
+        var patch
+        $.get('patches/myPatch.pd', function(patchStr) {
+            patch = Pd.loadPatch(patchStr)
+            Pd.start()
+        })
+        </script>
+  </head>
+  <body>
+      var toogle = new Nexus.Toggle('#target')
+
+  </body>
+</html>
