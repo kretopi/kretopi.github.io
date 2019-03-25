@@ -23,9 +23,13 @@
   <div id="target"></div>
     <script>
   var toggle = new Nexus.Toggle('#target',{
-    'size': [40,20],
+    'size': [80,20],
     'state': false
 })
+  
+  toggle.on('change',function(v) {
+  Pd.send('test', v)
+});
 </script>
 
   </body>
