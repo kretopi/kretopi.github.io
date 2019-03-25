@@ -21,16 +21,21 @@
     </script>
   
   <div id="target"></div>
+    
     <script>
-  var toggle = new Nexus.Toggle('#target',{
-    'size': [80,20],
-    'state': false
+var slider = new Nexus.Slider('#target',{
+    'size': [120,20],
+    'mode': 'relative',  // 'relative' or 'absolute'
+    'min': 0,
+    'max': 1,
+    'step': 0,
+    'value': 0
 })
   </script>
     <script>
   
-  toggle.on('change',function(v) {
-  Pd.send('test', 1)
+  slider.on('change',function(v) {
+  Pd.send('test', v)
 });
 </script>
 
