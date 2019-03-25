@@ -12,11 +12,14 @@
         </script>
   </head>
   <body>
-     <div id="toggle"></div>
-
-    <script>
-      var toggle = new Nexus.Toggle('#toggle')
-    </script>
+    <button id="startButton">Start patch</button>
+<script>
+  // Now, when user clicks on button, Pd will start and sound should work even on iOS.
+  var button = document.getElementById('startButton')
+  Pd.startOnClick(button, function() {
+    console.log('clicked!')
+  })
+</script>
 
   </body>
 </html>
