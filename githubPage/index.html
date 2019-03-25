@@ -12,11 +12,21 @@
         </script>
   </head>
   <body>
-        <div id="dial"></div>
+        <div id="instrument"></div>
 
-        <script>
-          var dial = new Nexus.Dial('#dial')
-        </script>
+   <script>
+     var dial = Nexus.Add.Dial('#instrument',{
+       'size': [100,100]
+     });
+
+     var slider = Nexus.Add.Slider('#instrument',{
+       'size': [25,100]
+     });
+
+     // then, to remove them tlater
+     dial.destroy();
+     slider.destroy();
+   </script>
 
   </body>
 </html>
