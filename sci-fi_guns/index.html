@@ -26,7 +26,7 @@
     var slider = new Nexus.Slider('#slider')
     
     slider.on('change',function(v) {
-      Pd.send('test', [v])
+      Pd.send('$0-type', [v])
   console.log(v);
 })
     </script>
