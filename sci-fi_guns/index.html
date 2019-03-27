@@ -40,5 +40,15 @@
 })
     </script>
     
+    <div id="type"></div>
+    <script>
+      var radiobutton = new Nexus.RadioButton('#type',{
+  'numberOfButtons': 2
+})
+    radiobutton.on('change',function(v) {
+      Pd.send('$0-type, [v])
+  console.log(v);
+})
+    </script>
   </body>
 </html>
