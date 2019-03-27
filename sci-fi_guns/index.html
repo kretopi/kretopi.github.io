@@ -1,1 +1,43 @@
-mhg
+<html>
+  <head>
+    <script src="js/NexusUI.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/webpd-latest.js"></script>
+    <script>
+        var patch
+        $.get('patches/myPatch.pd', function(patchStr) {
+            patch = Pd.loadPatch(patchStr)
+     //       Pd.start()
+        })
+        </script>
+  </head>
+  <body>
+    <button id="startButton">Start patch</button>
+<script>
+  // Now, when user clicks on button, Pd will start and sound should work even on iOS.
+  var button = document.getElementById('startButton')
+  Pd.startOnClick(button, function() {
+  })
+    </script>
+ 
+    <div id="slider"></div>
+    
+     <script>
+    var slider = new Nexus.Slider('#slider')
+    
+    slider.on('change',function(v) {
+      Pd.send('test', [v])
+  console.log(v);
+})
+    </script>
+    <div id="fire"></div>
+    <script>
+      var fire = new Nexus.Button('#target')
+      
+      fire.on('change',function(v) {
+      Pd.send('$0-fire', [v])
+  console.log(v);
+})
+    
+  </body>
+</html>
