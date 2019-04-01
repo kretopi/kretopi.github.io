@@ -13,13 +13,18 @@
   </head>
   <body>
     <button id="startButton">Start patch</button>
+    <button id="play">Play</button>
 <script>
   // Now, when user clicks on button, Pd will start and sound should work even on iOS.
   var button = document.getElementById('startButton')
   Pd.startOnClick(button, function() {
   })
     </script>
- 
+ <script>
+   var button = document.getElementById('play')
+   Pd.send('on', [1])
+    </script>
+    
     <div id="slider"></div>
      <script>
     var slider = new Nexus.Slider('#slider')
