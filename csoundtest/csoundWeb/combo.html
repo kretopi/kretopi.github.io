@@ -77,13 +77,10 @@
       if (playing == false) {
         CSOUND_AUDIO_CONTEXT.resume();
         if (started == false) {
-          console.log("\n Stria by John Chowning");
-          console.log("reconstruction by K. Dahan \n");
+
           started = true;
         }
-        document.getElementById('playButton').innerText = "pause";
-        playing = true;
-      } else {
+      
         CSOUND_AUDIO_CONTEXT.suspend();
         document.getElementById('playButton').innerText = "play";
         playing = false;
