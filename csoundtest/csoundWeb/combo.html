@@ -50,7 +50,7 @@
     function moduleDidLoad() {
       document.getElementById('playButton').disabled = false;
     //  CSOUND_AUDIO_CONTEXT.suspend();
-     // csound.PlayCsd("test.csd");
+      csound.PlayCsd("test.csd");
 
     }
 
@@ -79,7 +79,7 @@
         CSOUND_AUDIO_CONTEXT.resume();
         started = true;
       }
-    csound.PlayCsd("test.csd");
+    csound.csoundReset();
     }
   </script>
 </head>
