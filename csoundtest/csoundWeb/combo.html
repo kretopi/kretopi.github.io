@@ -70,21 +70,15 @@
       }
     }
 
-    var playing = false;
+ 
     var started = false;
 
     function click_this() {
-      if (playing == false) {
+      if (started == false) {
         CSOUND_AUDIO_CONTEXT.resume();
-        if (started == false) {
-
-          started = true;
-        }
-      
-       // CSOUND_AUDIO_CONTEXT.suspend();
-       // document.getElementById('playButton').innerText = "play";
-        playing = false;
+        started = true;
       }
+     
     }
   </script>
 </head>
