@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title>Procedural Audio</title>
+  
+
+
+  </style>
+ 
+   <script type="text/javascript" src="js/csound.js"></script>
+   
+
+  <script type="text/javascript">
+    function moduleDidLoad() {
+		
+      csound.Play();
+      csound.CompileOrc(document.getElementById('instruments').value);
+	  
+    }
+
+
+    function attachListeners() {
+	document.getElementById('button1').addEventListener('click', LaserSin);
+	document.getElementById('button2').addEventListener('click', LaserSaw);
+	document.getElementById('button3').addEventListener('click', LaserSquare);
+	document.getElementById('button9').addEventListener('click', GunShoot);
+	document.getElementById('button4').addEventListener('click', Button);
+	document.getElementById('button6').addEventListener('click', Button2);
+	document.getElementById('button5').addEventListener('click', AmbientNoise);
+	document.getElementById('button7').addEventListener('click', Bell);
+	document.getElementById('button8').addEventListener('click', Knock);
+	document.getElementById('button10').addEventListener('click', Night);
+	document.getElementById('button11').addEventListener('click', Engine);
+	document.getElementById('button12').addEventListener('click', PhoneButton);
+	document.getElementById('button13').addEventListener('click', Birds);
+
+    }
+
+  
+    
+var started = false;
+    // click handler
+    function Play () {
+
+
+        if (started == false) {
+            CSOUND_AUDIO_CONTEXT.resume();
+           started = true;
+        }
+    }
+
+
+  
+    function LaserSin() {
+        Play();
+      csound.Event("i 1 0 0.5 1");
+    }
+  
+    function LaserSaw() {
+      Play();
+      csound.Event("i 1 0 0.5 2");
+    }
+
+    function LaserSquare() {
+	Play();
+	csound.Event("i 1 0 0.5 3");
+    }
+
+    function Button() {
+	Play();
+	csound.Event("i 4 0 0.5 1 0.7");
+    //csound.Event("i 200 0 2")
+    }
+  
+    function Button2() {
+        Play();
+        csound.Event("i 4 0 0.5 1 0.7");
+        csound.Event("i 4 0.1 1 0.7 0.5");
+     //   csound.Event("i 200 0 2")
+      
+    }
+
+function Knock() {
+Play();
+csound.Event("i 3 0 1");
+}
+
+function GunShoot() {
+Play();
+csound.Event('i 8 0 1');
+
+}
+
+
+function Bell() {
+Play();
+csound.Event("i 2 0 3 1 1 0.7 3");
+csound.Event("i 2 0 3 2 0.119 0.4 3");
+csound.Event("i 2 0 3 2.995 0.664 0.3 2");
+csound.Event("i 2 0 3 9.584 0.162 0.1 1");
+
+}
+
+  var started1 = false;
+    function AmbientNoise() {
+
+
+	if (started1 == false) {
+	  CSOUND_AUDIO_CONTEXT.resume();
+	  document.getElementById('button5').innerText = "Ambient Pause";
+	  started1 = true;
+	  csound.Event("i 500 0 10")
+	  } else {
+	  csound.Event("i 501 0 0.1")
+	  document.getElementById('button5').innerText = "Ambient Play";
+	  started1 = false;
+	  }
+	}
+
+var started2 = false;
+	function Night() {
+
+if (started2 == false) {
+	  CSOUND_AUDIO_CONTEXT.resume();
+	  document.getElementById('button10').innerText = "Night Pause";
+	  started2 = true;
+	  csound.Event("i 900 0 10")
+	  } else {
+	  csound.Event("i 901 0 0.1")
+	  document.getElementById('button10').innerText = "Night Play";
+	  started2 = false;
+	  }
+	}
+var started3 = false;
+	function Engine() {
+
+if (started3 == false) {
+	  CSOUND_AUDIO_CONTEXT.resume();
+	  document.getElementById('button11').innerText = "Engine Pause";
+	  started3 = true;
+	  csound.Event("i 1000 0 10")
+	  } else {
+	  csound.Event("i 1001 0 0.1")
+	  document.getElementById('button11').innerText = "Engine Play";
+	  started3 = false;
+	  }		
+	}
+function PhoneButton() {
+Play();
+var ran = Math.floor(Math.random() * 16); 
+switch(ran) {
+case 0:
+csound.Event("i 11 0 0.2 1209 697");
+break
+
+case 1:
+csound.Event("i 11 0 0.2 1336 697");
+break
+
+case 2:
+csound.Event("i 11 0 0.2 1477 697");
+break
+
+case 3:
+csound.Event("i 11 0 0.2 1633 697");
+break
+
+case 4:
+csound.Event("i 11 0 0.2 1209 770");
+break
+
+case 5:
+csound.Event("i 11 0 0.2 1336 770");
+break
+
+case 6:
+csound.Event("i 11 0 0.2 1477 770");
+break
+
+case 7:
+csound.Event("i 11 0 0.2 1633 770");
+break
+
+case 8:
+csound.Event("i 11 0 0.2 1209 852");
+break
+
+case 9:
+csound.Event("i 11 0 0.2 1336 852");
+break
+
+case 10:
+csound.Event("i 11 0 0.2 1477 852");
+break
+
+case 11:
+csound.Event("i 11 0 0.2 1633 852");
+break
+
+case 12:
+csound.Event("i 11 0 0.2 1209 941");
+break
+
+case 13:
+csound.Event("i 11 0 0.2 1336 941");
+break
+
+case 14:
+csound.Event("i 11 0 0.2 1477 941");
+break
+
+case 15:
+csound.Event("i 11 0 0.2 1633 941");
+break
+}
+}
+
+var started4 = false;
+	function Birds() {
+
+if (started4 == false) {
+	  CSOUND_AUDIO_CONTEXT.resume();
+	  document.getElementById('button13').innerText = "Birds Pause";
+	  started4 = true;
+	  csound.Event("i 1200 0 10")
+	  } else {
+	  csound.Event("i 1201 0 0.1")
+	  document.getElementById('button13').innerText = "Birds Play";
+	  started4 = false;
+	  }		
+	}
+	
+  
+  </script>
+
+
+</head>
+
+<body>
+  
+    <H1> Procedural Audio Examples </H1>
+    
+<button id="button1">Laser Shoot</button>
+<button id="button2">Laser Shoot 2</button>
+<button id="button3">Laser Shoot 3</button>
+<button id="button9">Gun Shoot</button></br>
+<button id="button4">Button 1</button>
+<button id="button6">Double Button</button>
+<button id="button12">Phone Button</button></br>
+<button id="button5">Ambient Play</button>
+<button id="button10">Night Play</button>
+<button id="button11">Engine Play</button>
+<button id="button13">Birds Play</button></br>
+<button id="button7">Bell</button></br>
+<button id="button8">Knock</button>
+
+
+    <textarea class="code" id="instruments" hidden>
+
+	seed 0 
+	giSin  ftgen  1, 0, 1024, 10, 1 
+	giSaw  ftgen  2, 0, 4096, 10, 1,1/2 
+	giSqu  ftgen  3, 0, 4096, 10, 1, 0, 1/3, 0, 1/5, 0, 1/7, 0, 1/9, 0 
+        maxalloc 1,10 
+        massign 1,1
+
+	instr 1 
+	itime random 0, 100 
+	ifreq random 0, 300 
+	itimeMaster = itime/800 + 0.2 
+	ifreqMaster = ifreq - 80 
+	ifreqStart = 1200 + ifreqMaster 
+	ifreqStop = ifreqStart/3 - 100 
+	avol linsegr 0, 0.001, 0.5, itimeMaster , 0, 1, 0 
+	aline expsegr ifreqStart, itimeMaster + 0.1, ifreqStop, 0, 1 
+	alaser poscil avol, aline, p4 
+	outs alaser*0.5, alaser*0.5  
+	endin
+
+	instr 2
+	ires random 250, 800
+	ares poscil p5/3, ires * p4/4
+	alin linseg 0, 0.005, 1, 0.05, p6, p7, 0
+	outs ares*alin, ares*alin
+	endin
+
+
+	instr 3
+	irandom = 60
+	irandom random 50, 100
+	aszum noise 2, 0.5
+	ilength random 10, 100
+	alow lowpass2 aszum, irandom + 50, 2
+	asin poscil 1, irandom
+	klin linseg 0, 0.007, 1, ilength/100 ,0 
+	outs (alow + asin)*klin*1.5, (alow + asin)*klin*1.5
+	endin
+
+	instr 4 
+	igain random 100, 500 
+	ifreq random 100, 400 
+	itime random 0, 100 
+	itimeMaster = itime/1000 + 0.2
+	aMod poscil igain, ifreq/p4 , giSin
+	aCar poscil 0.3, ifreq/p4 + aMod, giSin
+	ares lowpass2 aCar, 200, 20 
+	asig rand 0.5 
+	ares1 balance ares, asig 
+	avol linsegr 0, 0.008, 1, itimeMaster, 0, 1, 0 
+	gaButton = ares1 * avol * p5
+	outs gaButton, gaButton
+	endin 
+
+	instr 5 
+	aszumVol randomh 0, 0.001, 5 
+	aszum noise aszumVol, 0.5 
+	kmasterRandom randomi 0.01, 5, 10 
+	afreqszum randomh p4/2, p4, kmasterRandom 
+	abandFreq randomh 0.001, 50, 1
+	avol linsegr 0, 4, 0.9, p3 , 0, 1, 0
+	aband areson aszum, afreqszum, abandFreq  
+	aadsr madsr 0.3, 0.1, 0.9, 1 
+	gaAmbient = aband*avol*0.4 
+	outs gaAmbient*aadsr, gaAmbient*aadsr  
+	endin 
+                        
+		instr 500 
+		ktrigger init 0 
+		if (ktrigger = 0) then 
+		event "i", 5, 0, 100, 100 
+		event "i", 5, 0, 100, 200 
+		event "i", 5, 0, 100, 400 
+		event "i", 5, 0, 100, 800 
+		event "i", 5, 0, 100, 1600 
+		event "i", 5, 0, 100, 3200 
+		event "i", 5, 0, 100, 6400 
+		event "i", 5, 0, 100, 12800 
+		event "i", 5, 0, 100, 26500 
+		event "i", 5, 0, 100, 51200 
+		ktrigger = 1 
+		endif 
+		endin 
+                        
+		instr 501 
+		ktrigger init 1 
+		if (ktrigger==1) then 
+		turnoff2 5, 1, 1 
+		kactive active 5 
+		turnoff2 5, 0, 1 
+		kactive active 5 
+		endif 
+		endin 
+                        
+
+
+	instr 8
+	aszum noise 1, 0.5
+	irandomFreq random 0, 400
+	irandomFreq = irandomFreq + 800
+	irandomTime  random 30, 100
+	irandomTime = irandomTime/150
+	alow lowpass2 aszum, irandomFreq + 50, 5
+	klin linseg 0, 0.007, 1, irandomTime ,0 
+	outs alow*klin, alow*klin
+	endin
+
+	instr 9
+	aos poscil 1, p5, 2
+	anoise noise aos, 0.3
+	alow lowpass2 anoise, p6, p4
+	outs alow*0.2, alow*0.2
+	endin
+
+		instr 900 
+		ktrigger init 0 
+		if (ktrigger = 0) then 
+		event "i", 9, 0, 100, 100, 10, 4000
+		ktrigger = 1 
+		endif 
+		endin 
+                        
+		instr 901 
+		ktrigger init 1 
+		if (ktrigger==1) then 
+		turnoff2 9, 1, 1 
+		kactive active 9 
+		turnoff2 9, 0, 1 
+		kactive active 9
+		endif 
+		endin 
+	
+	instr 10
+	aos poscil 1, p5, 2
+	anoise noise aos, 0.3
+	alow lowpass2 anoise, p6, p4
+	outs alow*0.2, alow*0.2
+	endin
+
+		instr 1000
+		ktrigger init 0
+		if (ktrigger = 0) then
+		event "i", 10, 0, 100, 3, 20, 2000
+		ktrigger = 1 
+		endif
+		endin
+                        
+		instr 1001
+		ktrigger init 1
+		if (ktrigger==1) then
+		turnoff2 10, 1, 1
+		kactive active 10
+		turnoff2 10, 0, 1
+		kactive active 10
+		endif
+		endin
+	
+	instr 11
+	aOne oscil 0.2, p4
+	aTwo oscil 0.2, p5
+	kLine linen 1, 0.02, 0.2, 0.02
+	aTone = (aOne+aTwo)*kLine
+	outs aTone, aTone
+	endin
+
+	instr 12
+	irand random 3100, 4000
+	krandtime random 0, 20;, 100
+	krandOnOff randomi 0, 1, krandtime
+	krandfreq randomi irand, irand+800 , 50
+	asig poscil 0.5, krandfreq, 3
+	ares lowpass2 asig, 2000, 10
+	aout = asig*krandOnOff
+	outs aout, aout
+	endin
+
+		instr 1200
+		ktrigger init 0
+		if (ktrigger = 0) then
+		event "i", 12, 0, 100
+		ktrigger = 1 
+		endif
+		endin
+                        
+		instr 1201
+		ktrigger init 1
+		if (ktrigger==1) then
+		turnoff2 12, 1, 1
+		kactive active 12
+		turnoff2 12, 0, 1
+		kactive active 12
+		endif
+		endin
+	
+</textarea>
+</body>
+
+</html>
