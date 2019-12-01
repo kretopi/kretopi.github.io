@@ -49,7 +49,7 @@
             // called by csound.js
             function moduleDidLoad() {
                 document.getElementById('playButton').disabled = false;
-                CSOUND_AUDIO_CONTEXT.suspend();
+                //  CSOUND_AUDIO_CONTEXT.suspend();
                 csound.PlayCsd("test.csd");
                 
             }
@@ -70,24 +70,15 @@
             }
         }
         
-        var playing = false;
+        
         var started = false;
         
         function click_this() {
-            if (playing == false) {
+            if (started == false) {
                 CSOUND_AUDIO_CONTEXT.resume();
-                if (started == false) {
-                    console.log("\n Stria by John Chowning");
-                    console.log("reconstruction by K. Dahan \n");
-                    started = true;
-                }
-                document.getElementById('playButton').innerText = "pause";
-                playing = true;
-            } else {
-                CSOUND_AUDIO_CONTEXT.suspend();
-                document.getElementById('playButton').innerText = "play";
-                playing = false;
+                started = true;
             }
+            
         }
         </script>
     </head>
