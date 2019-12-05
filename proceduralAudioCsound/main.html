@@ -4,14 +4,9 @@
 
 <head>
   <title>Procedural Audio</title>
-  
-
-
-  </style>
  
    <script type="text/javascript" src="js/csound.js"></script>
    
-
   <script type="text/javascript">
     function moduleDidLoad() {
 		
@@ -19,7 +14,6 @@
       csound.CompileOrc(document.getElementById('instruments').value);
 	  
     }
-
 
     function attachListeners() {
 	document.getElementById('button1').addEventListener('click', LaserSin);
@@ -35,12 +29,12 @@
 	document.getElementById('button11').addEventListener('click', Engine);
 	document.getElementById('button12').addEventListener('click', PhoneButton);
 	document.getElementById('button13').addEventListener('click', Birds);
+	document.getElementById('button14').addEventListener('click', Jump);
 
     }
 
   
-    
-var started = false;
+    var started = false;
     // click handler
     function Play () {
 
@@ -71,42 +65,34 @@ var started = false;
     function Button() {
 	Play();
 	csound.Event("i 4 0 0.5 1 0.7");
-    //csound.Event("i 200 0 2")
     }
   
     function Button2() {
         Play();
         csound.Event("i 4 0 0.5 1 0.7");
-        csound.Event("i 4 0.1 1 0.7 0.5");
-     //   csound.Event("i 200 0 2")
-      
+        csound.Event("i 4 0.1 1 0.7 0.5");     
     }
 
-function Knock() {
-Play();
-csound.Event("i 3 0 1");
-}
+    function Knock() {
+	Play();
+	csound.Event("i 3 0 1");
+    }
 
-function GunShoot() {
-Play();
-csound.Event('i 8 0 1');
+    function GunShoot() {
+	Play();
+	csound.Event('i 8 0 1');
+    }
 
-}
+    function Bell() {
+	Play();
+	csound.Event("i 2 0 3 1 1 0.7 3");
+	csound.Event("i 2 0 3 2 0.119 0.4 3");
+	csound.Event("i 2 0 3 2.995 0.664 0.3 2");
+	csound.Event("i 2 0 3 9.584 0.162 0.1 1");
+    }
 
-
-function Bell() {
-Play();
-csound.Event("i 2 0 3 1 1 0.7 3");
-csound.Event("i 2 0 3 2 0.119 0.4 3");
-csound.Event("i 2 0 3 2.995 0.664 0.3 2");
-csound.Event("i 2 0 3 9.584 0.162 0.1 1");
-
-}
-
-  var started1 = false;
+    var started1 = false;
     function AmbientNoise() {
-
-
 	if (started1 == false) {
 	  CSOUND_AUDIO_CONTEXT.resume();
 	  document.getElementById('button5').innerText = "Ambient Pause";
@@ -119,10 +105,9 @@ csound.Event("i 2 0 3 9.584 0.162 0.1 1");
 	  }
 	}
 
-var started2 = false;
-	function Night() {
-
-if (started2 == false) {
+    var started2 = false;
+    function Night() {
+	if (started2 == false) {
 	  CSOUND_AUDIO_CONTEXT.resume();
 	  document.getElementById('button10').innerText = "Night Pause";
 	  started2 = true;
@@ -133,10 +118,10 @@ if (started2 == false) {
 	  started2 = false;
 	  }
 	}
-var started3 = false;
-	function Engine() {
-
-if (started3 == false) {
+	  
+    var started3 = false;
+    function Engine() {
+	if (started3 == false) {
 	  CSOUND_AUDIO_CONTEXT.resume();
 	  document.getElementById('button11').innerText = "Engine Pause";
 	  started3 = true;
@@ -147,80 +132,80 @@ if (started3 == false) {
 	  started3 = false;
 	  }		
 	}
-function PhoneButton() {
-Play();
-var ran = Math.floor(Math.random() * 16); 
-switch(ran) {
-case 0:
-csound.Event("i 11 0 0.2 1209 697");
-break
+	  
+    function PhoneButton() {
+	Play();
+	var ran = Math.floor(Math.random() * 16); 
+	switch(ran) {
+	case 0:
+	csound.Event("i 11 0 0.2 1209 697");
+	break
 
-case 1:
-csound.Event("i 11 0 0.2 1336 697");
-break
+	case 1:
+	csound.Event("i 11 0 0.2 1336 697");
+	break
 
-case 2:
-csound.Event("i 11 0 0.2 1477 697");
-break
+	case 2:
+	csound.Event("i 11 0 0.2 1477 697");
+	break
 
-case 3:
-csound.Event("i 11 0 0.2 1633 697");
-break
+	case 3:
+	csound.Event("i 11 0 0.2 1633 697");
+	break
 
-case 4:
-csound.Event("i 11 0 0.2 1209 770");
-break
+	case 4:
+	csound.Event("i 11 0 0.2 1209 770");
+	break
 
-case 5:
-csound.Event("i 11 0 0.2 1336 770");
-break
+	case 5:
+	csound.Event("i 11 0 0.2 1336 770");
+	break
 
-case 6:
-csound.Event("i 11 0 0.2 1477 770");
-break
+	case 6:
+	csound.Event("i 11 0 0.2 1477 770");
+	break
 
-case 7:
-csound.Event("i 11 0 0.2 1633 770");
-break
+	case 7:
+	csound.Event("i 11 0 0.2 1633 770");
+	break
 
-case 8:
-csound.Event("i 11 0 0.2 1209 852");
-break
+	case 8:
+	csound.Event("i 11 0 0.2 1209 852");
+	break
 
-case 9:
-csound.Event("i 11 0 0.2 1336 852");
-break
+	case 9:
+	csound.Event("i 11 0 0.2 1336 852");
+	break
 
-case 10:
-csound.Event("i 11 0 0.2 1477 852");
-break
+	case 10:
+	csound.Event("i 11 0 0.2 1477 852");
+	break
 
-case 11:
-csound.Event("i 11 0 0.2 1633 852");
-break
+	case 11:
+	csound.Event("i 11 0 0.2 1633 852");
+	break
 
-case 12:
-csound.Event("i 11 0 0.2 1209 941");
-break
+	case 12:
+	csound.Event("i 11 0 0.2 1209 941");
+	break
 
-case 13:
-csound.Event("i 11 0 0.2 1336 941");
-break
+	case 13:
+	csound.Event("i 11 0 0.2 1336 941");
+	break
 
-case 14:
-csound.Event("i 11 0 0.2 1477 941");
-break
+	case 14:
+	csound.Event("i 11 0 0.2 1477 941");
+	break
 
-case 15:
-csound.Event("i 11 0 0.2 1633 941");
-break
-}
-}
+	case 15:
+	csound.Event("i 11 0 0.2 1633 941");
+	break
+	}
+       }
 
-var started4 = false;
-	function Birds() {
-
-if (started4 == false) {
+    var started4 = false;
+    function Birds() {
+	if (started4 == false) {
 	  CSOUND_AUDIO_CONTEXT.resume();
 	  document.getElementById('button13').innerText = "Birds Pause";
 	  started4 = true;
@@ -231,10 +216,13 @@ if (started4 == false) {
 	  started4 = false;
 	  }		
 	}
+
+    function Jump() {
+	    Play();
+	    csound.Event("i 6 0 0.5")
 	
   
   </script>
-
 
 </head>
 
@@ -245,7 +233,8 @@ if (started4 == false) {
 <button id="button1">Laser Shoot</button>
 <button id="button2">Laser Shoot 2</button>
 <button id="button3">Laser Shoot 3</button>
-<button id="button9">Gun Shoot</button></br>
+<button id="button9">Gun Shoot</button>
+<button id="button14">Jump</button></br>
 <button id="button4">Button 1</button>
 <button id="button6">Double Button</button>
 <button id="button12">Phone Button</button></br>
@@ -352,9 +341,19 @@ if (started4 == false) {
 		kactive active 5 
 		endif 
 		endin 
-                        
-
-
+                
+	instr 6
+	itime random 0, 100 
+	ifreq random 40, 80 
+	kline line ifreq, itime/1000, ifreq+10 
+	aadsr linseg 0, 0.02, 1, 0.1, 0
+	kfreq = int(kline)
+	kpitch cpsmidinn kfreq
+	asig   poscil3 0.1, kpitch, 3
+	aouts = asig*aadsr*0.5
+	outs   aouts, aouts
+	endin
+	    
 	instr 8
 	aszum noise 1, 0.5
 	irandomFreq random 0, 400
