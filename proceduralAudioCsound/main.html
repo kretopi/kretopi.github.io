@@ -350,7 +350,7 @@
 	kfreq = int(kline)
 	kpitch cpsmidinn kfreq
 	asig   poscil3 0.1, kpitch, 3
-	aouts = asig*aadsr
+	aouts = asig*aadsr*1.3
 	outs   aouts, aouts
 	endin
 	    
