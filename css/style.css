@@ -1,0 +1,56 @@
+header {
+width: auto;
+  text-align: center;
+  background-color: yellow;
+}
+
+aside {
+background-color: green;
+  
+  float: left;
+ 
+border-right-width: 1px;
+border-right-style: solid;
+border-right-color: grey-dark;
+
+
+}
+
+body {
+  margin: 25px;
+  background-color: gray;
+}
+
+ul {
+/* float: left; */
+width: 100%;
+padding: ;
+margin: 0;
+list-style: none;
+}
+
+li a {
+display: block;
+/* float: left; */
+/* text-align: ; */
+/* font-size: 1.2em; */
+/* width: 12%; */
+text-decoration: none;
+padding: 10px 10px;
+margin: 0px 1px 1px 0px;
+
+
+}
+footer {
+  background-color: red;
+  width: 100%;
+position: fixed;
+  text-align: center;
+bottom: 10px;
+}
+
+main{
+  background-color: blue;
+padding: 0px;
+  margin: 0;
+}
