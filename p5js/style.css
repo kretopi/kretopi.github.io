@@ -1,0 +1,58 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #38383C;
+  color: #EAEAEA;
+}
+/* ca:play: block;
+}
+ */
+
+.m {
+  width: 2000px;
+}
+
+#one {
+  float: left;
+  max-width: 10%;
+/*   height: 30%; */
+/*   float: left; */
+  background-color: #499afa;
+/*   display: block; */
+}
+
+#two {
+/*   float: left; */
+  max-width: 20%;
+/*   height: 30%; */
+  
+  background-color: gray;
+/*   display: block; */
+}
+
+#three {
+  float: left;
+  max-width: 20%;
+/*   height: 30%; */
+  background-color: green;
+/*   float: left; */
+/*   display: block; */
+  
+}
+#four {
+/*   float: left; */
+  max-width: 20%;
+/*   height: 30%; */
+  background-color: red;
+/*   float: left; */
+/*   display: block; */
+}
+iframe {
+  width: 448px;
+  height: 252px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
