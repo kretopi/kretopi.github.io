@@ -86,3 +86,8 @@ iframe {
   margin-right: auto;
   padding: 5px;
 }
+.soundcloud {
+  float: left;
+  width: 200px;
+  height :200px;
+}
