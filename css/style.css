@@ -58,3 +58,16 @@ iframe {
   padding: 5px;
 }
 .soundcloud {
+  float: left;
+  width: 30%;
+  height :200px;
+  
+}
+.soundcloudMain{
+  padding: 10px;
+  float: none;
+}
+
+.mail {
+  padding: 20px;
+}
