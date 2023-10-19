@@ -66,6 +66,8 @@ iframe {
   
 }
 .soundcloudMain{
+    margin-left: auto;
+  margin-right: auto;
   padding: 10px;
   float: none;
 }
