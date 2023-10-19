@@ -12,41 +12,12 @@ html, body {
   width: 2000px;
 }
 
-#one {
+.proceduralAudio {
   float: left;
-  max-width: 10%;
-/*   height: 30%; */
-/*   float: left; */
-  background-color: #499afa;
-/*   display: block; */
+  display: block;
+  padding: 5px;
 }
 
-#two {
-/*   float: left; */
-  max-width: 20%;
-/*   height: 30%; */
-  
-  background-color: gray;
-/*   display: block; */
-}
-
-#three {
-  float: left;
-  max-width: 20%;
-/*   height: 30%; */
-  background-color: green;
-/*   float: left; */
-/*   display: block; */
-  
-}
-#four {
-/*   float: left; */
-  max-width: 20%;
-/*   height: 30%; */
-  background-color: red;
-/*   float: left; */
-/*   display: block; */
-}
 /*///////////////////*/
 ul {
   list-style-type: none;
@@ -88,6 +59,11 @@ iframe {
 }
 .soundcloud {
   float: left;
-  width: 200px;
+  width: 30%;
   height :200px;
+  
+}
+.soundcloudMain{
+  padding: 10px;
+  float: none;
 }
