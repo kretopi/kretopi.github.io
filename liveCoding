@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="liveCoding.html">Live Coding Music</a></li>
+  <li><a href="music.html">Music</a></li>
+  <li><a href="gameAudio.html">Game Audio</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  
+</ul>
+    
+<h2 align="center">Live Coding Music</h2>
+   
+<iframe style="border: 0; width: 450px; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3459678377/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kretopi.bandcamp.com/album/live-coding-sessions">Live Coding Sessions by kretopi</a></iframe>
+    
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t2PuiFXHskU?si=2MEde8hSgvOyTUnM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jGi-w3Wivf8?si=mf_JDJ0BySWQW1Lw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ciCRbPfyj1I?si=oQIo3TEWIXyuzsrP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
+<iframe width="560" height="315" src="https://www.youtube.com/embed/njhPZbh-XSo?si=A1nmlhVtgFhTbh24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/R98OkTERuL0?si=fMlWfrm_zef4S7Bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+  </body>
+</html>
