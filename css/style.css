@@ -1,60 +1,60 @@
-header {
-width: auto;
-  text-align: center;
-  background-color: yellow;
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #38383C;
+  color: #EAEAEA;
+}
+/* ca:play: block;
+}
+ */
+
+.m {
+  width: 2000px;
 }
 
-aside {
-background-color: green;
-  
+.proceduralAudio {
   float: left;
- 
-border-right-width: 1px;
-border-right-style: solid;
-border-right-color: grey-dark;
-
-
+  display: block;
+  padding: 5px;
 }
 
-body {
-  margin: 25px;
-  background-color: gray;
-}
-
+/*///////////////////*/
 ul {
-/* float: left; */
-width: 100%;
-padding: ;
-margin: 0;
-list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-bottom: 1px solid black;
+/*   background-color: #f3f3f3; */
+}
+
+li {
+  float: left;
 }
 
 li a {
-display: block;
-/* float: left; */
-/* text-align: ; */
-/* font-size: 1.2em; */
-/* width: 12%; */
-text-decoration: none;
-padding: 10px 10px;
-margin: 0px 1px 1px 0px;
-
-
-}
-footer {
-  background-color: red;
-  width: 100%;
-position: fixed;
+  display: block;
+  color: gray;
   text-align: center;
-bottom: 10px;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-main{
-  background-color: blue;
-padding: 0px;
-  margin: 0;
+li a:hover:not(.active) {
+  background-color: #ddd;
 }
-vid {
-  margin: 25px;
-float: right;
+
+li a.active {
+  color: #EAEAEA;
+  background-color: gray;
 }
+/*//////////////////*/
+iframe {
+  width: 448px;
+  height: 252px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+.soundcloud {
