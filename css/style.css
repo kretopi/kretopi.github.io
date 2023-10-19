@@ -14,6 +14,8 @@ html, body {
 
 .proceduralAudio {
   float: left;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
   padding: 5px;
 }
