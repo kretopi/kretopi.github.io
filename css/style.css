@@ -1,33 +1,31 @@
 html, body {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   background-color: #38383C;
   color: #EAEAEA;
+  font-family: 'Raleway', sans-serif;
 }
-/* ca:play: block;
-}
- */
 
+hr {
+  clear: left;
+}
+
+h2 {
+  padding: 0;
+  clear: left;
+}
+
+/*menu*/
 .m {
-  width: 2000px;
+  width: 200px;
 }
 
-/* .proceduralAudio {
-  float: left;
-  display: block;
-  padding: 5px;
-} */
-.procAudio {
-}
-
-/*///////////////////*/
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   border-bottom: 1px solid black;
-/*   background-color: #f3f3f3; */
 }
 
 li {
@@ -50,28 +48,86 @@ li a.active {
   color: #EAEAEA;
   background-color: gray;
 }
-/*//////////////////*/
-iframe {
-  width: 448px;
-  height: 252px;
-  display: block;
+/*menu end */
+
+/*gameAudio*/
+
+.container1 {
+  width: 700px;
+  height: 305px;
   margin-left: auto;
   margin-right: auto;
-  padding: 5px;
-}
-.soundcloud {
-  float: left;
-  width: 30%;
-  height :200px;
-  
-}
-.soundcloudMain{
-    margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  float: none;
 }
 
-.mail {
-  padding: 20px;
+.content1 {
+  padding: 5px;
+  width: 340px;
+  height: 300px;
+  float: left;
+}
+
+.soundcloud {
+  padding: 5px;
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+
+.container2 {
+  width: 630px;
+  height: 305px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*gameAudio end */
+/*live coding */
+
+.container3 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1010px;
+}
+
+.content3 {
+  padding: 5px;
+  width: 490px;
+  height: 315px;
+  float: left;
+}
+
+/*live coding end*/
+/*music//*/
+
+.container4 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 920px;
+}
+
+.content4 {
+  padding: 5px;
+  width: 450px;
+  height: 120px;
+  float: left;
+}
+
+/* music end*/
+/* contact*/
+
+.contact {s
+  padding: 50px;
+}
+
+/*contact end*/
+/*index*/
+.indexParagraph {
+}
+
+.radioKapital {
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  height: 450px;
 }
