@@ -130,4 +130,16 @@ li a.active {
   margin-right: auto;
   width: 450px;
   height: 450px;
+  
 }
+
+.archive {
+  padding: 5px;
+  float: left;
+}
+
+.archive1 {
+ margin-left: auto;
+ margin-right: auto;
+}
+
